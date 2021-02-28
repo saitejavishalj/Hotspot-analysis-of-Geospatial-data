@@ -57,7 +57,7 @@ Note:
 ### Input data format
 The main function/entrace is "cse512.Entrance" scala file.
 
-1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from the previous phase. But the coding template already parsed it for you. Find the data from our asu google drive shared folder: [https://drive.google.com/drive/folders/1W4GLKNsGlgXp7fHtDlhHEBdLVw_IuAXh?usp=sharing](https://drive.google.com/drive/folders/1W4GLKNsGlgXp7fHtDlhHEBdLVw_IuAXh?usp=sharing). To get the permission to download the data, you have to use your asu gmail account.
+1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from the previous phase. But the coding template already parsed it for you. 
 
 2. Zone data (only for hot zone analysis): at "src/resources/zone-hotzone" of the template
 
