@@ -1,4 +1,4 @@
-# CSE512-Project-Hotspot-Analysis-Template
+# Hotspot-Analysis-Of-Geospatial-Data
 #### Version history
 v1.1, Nov 16, Fix a bug in "Entrace.scala"
 v1.0, Nov 13, Initial version
@@ -57,7 +57,7 @@ Note:
 ### Input data format
 The main function/entrace is "cse512.Entrance" scala file.
 
-1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from the previous phase. But the coding template already parsed it for you. Find the data from our asu google drive shared folder: [https://drive.google.com/drive/folders/1W4GLKNsGlgXp7fHtDlhHEBdLVw_IuAXh?usp=sharing](https://drive.google.com/drive/folders/1W4GLKNsGlgXp7fHtDlhHEBdLVw_IuAXh?usp=sharing). To get the permission to download the data, you have to use your asu gmail account.
+1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from the previous phase. But the coding template already parsed it for you. 
 
 2. Zone data (only for hot zone analysis): at "src/resources/zone-hotzone" of the template
 
@@ -80,63 +80,11 @@ All zones with their count, sorted by "rectangle" string in an ascending order.
 
 
 #### Hot cell analysis
-The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, DO NOT OUTPUT G score.
+The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, Did NOT OUTPUT G score.
 
 ```
 -7399,4075,15
 -7399,4075,29
 -7399,4075,22
 ```
-### Example answers
-An example input and answer are put in "testcase" folder of the coding template. 
 
-1. hotcell-example-answer-withZscore-sample.csv -- answer of the sampled input data with score.
-2. hotcell-example-answer-withZscore.csv -- answer with score of the full input data from Google Drive shared folder.
-3. hotcell-example-answer.csv -- the expected output result of using the yellow_tripdata_2009-01_point.csv as the input.
-4. hotcell-example-input.txt -- the input for running the jar file.
-
-## Where you need to change
-DO NOT DELETE any existing code in the coding template unless you see this "YOU NEED TO CHANGE THIS PART"
-
-### Hot zone analysis
-
-In the code template,
-
-1. You need to change "**HotzoneAnalysis.scala** and **HotzoneUtils.scala**".
-2. The coding template has loaded the data and wrote the first step, range join query, for you. Please finish the rest of the task.
-3. The output DataFrame should be sorted by you according to "rectangle" string.
-
-### Hot cell analysis
-In the code template,
-
-1. You need to change "**HotcellAnalysis.scala** and **HotcellUtils.scala**".
-2. The coding template has loaded the data and decided the cell coordinate, x, y, z and their min and max. Please finish the rest of the task.
-3. The output DataFrame should be sorted by you according to G-score. The coding template will take the first 50 to output. DO NOT OUTPUT G-score.
-
-
-## Submission
-### Submission files
-1. Submit your project jar package.
-2. Zip your project source code and submit to Blackboard.
-3. Note that: you need to make sure your code can compile and package by entering ```sbt clean assembly```. We will run the compiled package on our cluster directly using "spark-submit" with parameters. If your code cannot compile and package, you will not receive any points.
-
-## Tips (Optional)
-This section is same with that in Phase 1.
-### How to debug your code in IDE
-
-If you are using the Scala template
-
-1. Use IntelliJ Idea with Scala plug-in or any other Scala IDE.
-2. Replace the logic of User Defined Functions ST\_Contains and ST\_Within in SpatialQuery.scala.
-3. Append ```.master("local[*]")``` after ```.config("spark.some.config.option", "some-value")``` to tell IDE the master IP is localhost.
-3. In some cases, you may need to go to "build.sbt" file and change ```% "provided"``` to ```% "compile"``` in order to debug your code in IDE
-4. Run your code in IDE
-5. **You must revert Step 3 and 4 above and recompile your code before use spark-submit!!!**
-
-### How to submit your code to Spark
-If you are using the Scala template
-
-1. Go to project root folder
-2. Run ```sbt clean assembly```. You may need to install sbt in order to run this command.
-3. Find the packaged jar in "./target/scala-2.11/CSE512-Project-Hotspot-Analysis-Template-assembly-0.1.0.jar"
-4. Submit the jar to Spark using Spark command "./bin/spark-submit". A pseudo code example: ```./bin/spark-submit ~/GitHub/CSE512-Project-Hotspot-Analysis-Template/target/scala-2.11/CSE512-Project-Hotspot-Analysis-Template-assembly-0.1.0.jar test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv```
