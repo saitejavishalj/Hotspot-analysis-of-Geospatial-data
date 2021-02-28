@@ -29,11 +29,8 @@ To reduce the computation power need，we made the following changes:
 1. The input will be a monthly taxi trip dataset from 2009 - 2012. For example, "yellow\_tripdata\_2009-01\_point.csv", "yellow\_tripdata\_2010-02\_point.csv".
 2. Each cell unit size is 0.01 * 0.01 in terms of latitude and longitude degrees.
 3. You should use 1 day as the Time Step size. The first day of a month is step 1. Every month has 31 days.
-4. You only need to consider Pick-up Location.
-5. We don't use Jaccard similarity to check your answer.
-However, you don't need to worry about how to decide the cell coordinates because the code template generated cell coordinates. You just need to write the rest of the task.
-
-## Coding template specification
+4. Considered only Pick-up Location.
+5. Did not use Jaccard similarity to check my answer.
 
 ### Input parameters
 
