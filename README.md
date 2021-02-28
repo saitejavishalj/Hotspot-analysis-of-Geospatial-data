@@ -1,4 +1,4 @@
-# CSE512-Project-Hotspot-Analysis-Template
+# Hotspot-Analysis-Of-Geospatial-Data
 #### Version history
 v1.1, Nov 16, Fix a bug in "Entrace.scala"
 v1.0, Nov 13, Initial version
