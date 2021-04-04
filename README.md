@@ -1,4 +1,4 @@
-# Large Scale Geo-Spatial Data Analysis using SparkSQL
+# Large Scale Geo-Spatial Data Analysis using SparkSQL for Streaming Analytics
 
 ## Distributed and Parallel Database Systems
 
