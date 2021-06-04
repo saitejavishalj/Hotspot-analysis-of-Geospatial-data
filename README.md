@@ -18,7 +18,7 @@ The project was aimed to setup a spark cluster with HDFS and run SparkSQL querie
 
 **Output:** A list of the fifty most significant hot spot cells in time and space as identified using the Getis-Ord  statistic.
   
-Technology used: Apache Spark, Hadoop Distributed File System (HDFS), Scala, sbt build tool, Amazon EC2
+**Technology used:** Apache Spark, Hadoop Distributed File System (HDFS), Scala, sbt build tool, Amazon EC2
 
 **Background:**
   The use of spatial statistics to discover statistically significant clusters or outliers in geographic data is a well-known analytic technique used by GIS experts.
